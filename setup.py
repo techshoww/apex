@@ -387,9 +387,9 @@ if "--cuda_ext" in sys.argv:
             )
         )
 
-if "--permutation_search" in sys.argv:
-    sys.argv.remove("--permutation_search")
-
+# if "--permutation_search" in sys.argv:
+#     sys.argv.remove("--permutation_search")
+if True:
     if CUDA_HOME is None:
         raise RuntimeError("--permutation_search was requested, but nvcc was not found.  Are you sure your environment has nvcc available?  If you're installing within a container from https://hub.docker.com/r/pytorch/pytorch, only images whose names contain 'devel' will provide nvcc.")
     else:
